@@ -1,17 +1,39 @@
-# Routing Lab with Redistribution, OSPF, and EIGRP
+# Routing Labs  
 
-This lab demonstrates a multi-protocol routing environment where different routing protocols are interconnected through redistribution.  
+This folder contains three labs demonstrating different routing protocols and redistribution.  
 
-## Key Features:
-- **Static & Default Routes**: Basic connectivity setup.  
-- **RIP**: Configured on one part of the network.  
-- **OSPF**: Configured on another segment with multiple areas.  
-- **EIGRP**: Running on a separate part of the topology.  
-- **Redistribution**: All routing protocols are redistributed into each other through the core router, enabling full connectivity across the network.  
+## Labs Overview  
 
-## Testing
-- Use `ping` to verify end-to-end reachability across all subnets.  
-- Use `show ip route` on each router to confirm redistributed routes.  
+### 1. EIGRP Lab  
+- Configure and verify EIGRP across multiple routers.  
+- Ensure end-to-end connectivity between hosts.  
+- **Verification:**  
+  - `show ip route` → check EIGRP-learned routes  
+  - `ping`, `traceroute` → test reachability  
 
 ---
-This lab is designed to simulate real-world scenarios where multiple routing protocols must coexist and share routes.
+
+### 2. OSPF Lab  
+- Configure OSPF with multiple routers.  
+- Build neighbor adjacencies and share routes between areas.  
+- **Verification:**  
+  - `show ip ospf neighbor` → check adjacency  
+  - `show ip route` → confirm OSPF-learned routes  
+
+---
+
+### 3. Redistribution Lab  
+- Demonstrates route redistribution across multiple routing protocols.  
+- Protocols included in this lab:  
+  - **EIGRP**  
+  - **OSPF**  
+  - **RIP v2**  
+  - **Static Routes**  
+  - **Default Routes**  
+- Core router redistributes routes between all domains to achieve full connectivity.  
+- **Verification:**  
+  - `show ip protocols` → confirm redistribution  
+  - `show ip route` → validate injected routes  
+  - `ping`, `traceroute` → test end-to-end communication  
+
+---
