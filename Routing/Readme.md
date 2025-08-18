@@ -1,25 +1,17 @@
-The purpose of this lab is to practice Redistribution between different routing protocols so that all networks can communicate with each other.
-In this lab we used:
+# Routing Lab with Redistribution, OSPF, and EIGRP
 
-Static Routing
-Default Routing
-RIP
-OSPF
-EIGRP
-All connected to a Core Router.
+This lab demonstrates a multi-protocol routing environment where different routing protocols are interconnected through redistribution.  
 
-🖥️ Topology
-A Core Router is connected to five routers, each running a different routing protocol.
-Each router has LANs and PCs behind it to test connectivity.
-The goal is that any device in any network can reach devices in other networks.
+## Key Features:
+- **Static & Default Routes**: Basic connectivity setup.  
+- **RIP**: Configured on one part of the network.  
+- **OSPF**: Configured on another segment with multiple areas.  
+- **EIGRP**: Running on a separate part of the topology.  
+- **Redistribution**: All routing protocols are redistributed into each other through the core router, enabling full connectivity across the network.  
 
-📑 Notes
-The full configuration is already inside the .pkt file.
-To check the configuration of any router, open the lab in Packet Tracer and run:
-show running-config
+## Testing
+- Use `ping` to verify end-to-end reachability across all subnets.  
+- Use `show ip route` on each router to confirm redistributed routes.  
 
-Make sure to test connectivity using ping between devices to confirm that Redistribution works correctly.
-
-✅ Outcome
-All networks are now connected.
-Practiced how to perform Redistribution between multiple routing protocols in a CCNA lab environment.
+---
+This lab is designed to simulate real-world scenarios where multiple routing protocols must coexist and share routes.
