@@ -1,7 +1,7 @@
 # CCNA Labs Repository  
 
 This repository contains a collection of **hands-on CCNA labs** organized by major networking domains.  
-Each lab is designed to reinforce theoretical knowledge with practical configuration and testing in Cisco Packet Tracer or GNS3.  
+All labs are built and tested on **Cisco Packet Tracer**.  
 
 ## 📂 Folder Structure  
 
@@ -28,7 +28,3 @@ This repo is built to help learners:
 - Practice **realistic CCNA-level labs**.  
 - Understand configuration and verification commands (`show run`, `show ip route`, `ping`, etc.).  
 - Build a strong foundation in **Routing, Switching, and Security** for the CCNA exam.  
-
----
-
-✍️ *Note:* Configurations are not hardcoded in the README files. Instead, use device CLI (`show run`) inside each lab to explore the setup.  
